@@ -15,18 +15,18 @@
 
         // list de poulet
         List<string> chicken_list = new List<string>();
-        chicken_list.Add("🐔1");
-        chicken_list.Add("🐔2");
-        chicken_list.Add("🐔3");
-        chicken_list.Add("🐔4");
-        chicken_list.Add("🐔5");
-        chicken_list.Add("🐔6");
-        chicken_list.Add("🐔7");
-        chicken_list.Add("🐔8");
-        chicken_list.Add("🐔9");
-        chicken_list.Add("🐔10");
-
-        chicken_list.Add("🐔11");
+        
+        chicken_list.Add("🐔");
+        chicken_list.add("🐔");
+        chicken_list.add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔");
+        //chicken_list.Add("🐔"); 
 
         string le_poulet = "";
 
@@ -35,10 +35,10 @@
         int width = consoleWidth - 2;
 
        
-        int x = 0; int y = 0; int a = 10; int counter = 0;
+        int x = 0; int y = 0; int counter = 0;
 
 
-        while (x <= width)
+        while (true)
         {
 
             for (int i = 0; i < chicken_list.Count; i++)
@@ -49,7 +49,7 @@
                     le_poulet = chicken_list[i];
                     break;
                 }
-                
+
             }
             while (y != sol)
             {
@@ -66,26 +66,27 @@
                 Console.WriteLine(le_poulet);
 
 
-                Random random = new Random(); // Une seule instance de Random pour éviter les répétitions
-                int posMin = 10; int posMax = 60;
-                random.Next(posMin, posMax + 1);
-
-
-                Thread.Sleep(50);
+                Thread.Sleep(40);
 
 
                 // Effacer la console 
                 Console.Clear();
                 y++;
             }
+            Random random = new Random(); // Une seule instance de Random pour éviter les répétitions
+            int posMin = 10; int posMax = 118;
+            int le_number = random.Next(posMin, posMax + 1);
+
             y = 0;
             counter++;
-            x +=a;
-             
+            x = le_number;
 
-
-            
-            
         }
+
+
+
+
+
+        
     }
 }
