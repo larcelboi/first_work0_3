@@ -17,8 +17,8 @@
         List<string> chicken_list = new List<string>();
         
         chicken_list.Add("🐔");
-        chicken_list.add("🐔");
-        chicken_list.add("🐔");
+        chicken_list.Add("🐔");
+        chicken_list.Add("🐔");
         //chicken_list.Add("🐔");
         //chicken_list.Add("🐔");
         //chicken_list.Add("🐔");
@@ -28,6 +28,7 @@
         //chicken_list.Add("🐔");
         //chicken_list.Add("🐔"); 
 
+        List<int> list_chiffre = new List<int>();
         string le_poulet = "";
 
 
@@ -64,15 +65,17 @@
                 // Configuration pour afficher les emojis
                 Console.OutputEncoding = System.Text.Encoding.UTF8;
                 Console.WriteLine(le_poulet);
+                Console.WriteLine(le_poulet);
 
 
                 Thread.Sleep(40);
-
+               
+                y++;
 
                 // Effacer la console 
-                Console.Clear();
-                y++;
-            }
+
+                Console.Clear()
+;            }
             Random random = new Random(); // Une seule instance de Random pour éviter les répétitions
             int posMin = 10; int posMax = 118;
             int le_number = random.Next(posMin, posMax + 1);
